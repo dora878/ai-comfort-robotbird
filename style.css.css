@@ -61,12 +61,20 @@ header {
 /* 按鈕樣式 (要有陪伴感和鼓勵感!) */
 button {
     width: 100%;
-    padding: 12px;
+    
+    /* 1. 調整內邊距 (Padding)：這是讓按鈕「變高」的關鍵！ */
+    /* 原本是 12px，我們把它調大到 18px，讓上下空間更舒適 */
+    padding: 18px; 
+    
     background-color: #f19f4d; /* 溫暖的橘色調 */
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 18px;
+    
+    /* 2. 調整字體大小：按鈕變大，字體也要跟著大才協調！ */
+    /* 原本是 18px，我們把它調大到 24px */
+    font-size: 24px; 
+    
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
