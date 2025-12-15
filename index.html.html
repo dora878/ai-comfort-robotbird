@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 心理健康感測機器人 (科展專用)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>💖 你的心靈狀態能量檢測站 💖</h1>
+        <p>請輸入模擬的生理與行為數據，讓我為你檢測能量狀態與提供溫暖陪伴。</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="input-panel">
+            <h2>🤖 數據輸入區 (模擬感測器)</h2>
+            <p class="note">數值會決定你的**風險分數**喔！請參考你提供的數據範圍輸入。</p>
+
+            <div class="input-group">
+                <label for="speed">🔊 語速變化：</label>
+                <input type="number" id="speed" placeholder="輸入百分比，如：30 (代表快 30%)，-20 (代表慢 20%)" value="0">
+                <span class="unit">%</span>
+            </div>
+
+            <div class="input-group">
+                <label for="hr">❤️ 靜息心率 (BPM)：</label>
+                <input type="number" id="hr" placeholder="如：85 (正常偏高) 或 140 (恐慌發作)" value="75">
+                <span class="unit">bpm</span>
+            </div>
+
+            <div class="input-group">
+                <label for="scr">✋ 皮電反應頻率 (SCR)：</label>
+                <input type="number" id="scr" placeholder="如：3 (憂鬱) 或 18 (高風險焦慮/恐慌)" value="3">
+                <span class="unit">次/分鐘</span>
+            </div>
+
+            <div class="input-group">
+                <label for="face">🙂 臉部表情：</label>
+                <select id="face">
+                    <option value="normal">無明顯變化 (正常)</option>
+                    <option value="anxiety">額頭皺眉/嘴角緊繃 (焦慮)</option>
+                    <option value="depression">微笑減少/眼皮下垂 (憂鬱)</option>
+                    <option value="panic">瞳孔放大/嘴部張開 (恐慌)</option>
+                </select>
+            </div>
+            
+            <button onclick="analyzeData()">✨ 執行 AI 能量檢測與陪伴 ✨</button>
+        </section>
+
+        <section class="output-panel">
+            <h2>✨ AI 檢測結果</h2>
+            
+            <div class="result-box">
+                <p><strong>風險等級：</strong></p>
+                <div id="riskLevel" class="level-display">待判斷</div>
+            </div>
+
+            <div class="result-box">
+                <p><strong>建議類型：</strong></p>
+                <div id="psychType" class="type-display">待判斷</div>
+            </div>
+            
+            <h2>💌 機器人撫慰回覆 (你的專屬陪伴)</h2>
+            <div id="robotResponse" class="response-display">
+                <p>等待你的數據輸入，我會在這裡提供最溫暖、最有同理心的陪伴喔！😊</p>
+            </div>
+
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

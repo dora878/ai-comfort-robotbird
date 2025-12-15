@@ -1,0 +1,115 @@
+/* 設定基礎字體和背景，讓整體看起來舒服 */
+body {
+    font-family: 'Arial', '微軟正黑體', sans-serif;
+    background-color: #f4f7f9; /* 淺藍灰的底色，溫暖又安定 */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex; /* 使用彈性佈局讓兩側內容並排 */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px; /* 兩欄之間的距離 */
+}
+
+/* 讓輸入和輸出面板看起來更清楚 */
+.input-panel, .output-panel {
+    flex: 1; /* 讓兩欄平均分配空間 */
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 輸入框樣式 */
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.input-group label {
+    flex: 0 0 150px; /* 讓標籤寬度固定 */
+    font-weight: bold;
+    color: #5a5a5a;
+}
+
+.input-group input, .input-group select {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.unit {
+    margin-left: 10px;
+    color: #888;
+}
+
+/* 按鈕樣式 (要有陪伴感和鼓勵感!) */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f19f4d; /* 溫暖的橘色調 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e58a36; /* 滑過時顏色變深一點 */
+}
+
+/* 顯示結果的區塊樣式 */
+.result-box {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.level-display, .type-display {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+/* 撫慰機器人回覆區的樣式 */
+.response-display {
+    min-height: 100px;
+    border: 2px solid #a8dadc; /* 一個療癒的青藍色 */
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f4feff;
+    margin-top: 15px;
+    white-space: pre-wrap; /* 保持程式碼中的換行 */
+}
+
+.note {
+    color: #999;
+    font-style: italic;
+    margin-bottom: 20px;
+    border-left: 3px solid #f19f4d;
+    padding-left: 10px;
+}
+
+/* 特別為風險等級設計顏色，讓評審一目瞭然 */
+.level-normal { color: #28a745; } /* 綠色 */
+.level-alert { color: #ffc107; } /* 黃色 */
+.level-high { color: #dc3545; } /* 紅色 */
